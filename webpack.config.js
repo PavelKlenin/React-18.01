@@ -1,4 +1,5 @@
 const path = require('path');
+HTMLplugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -35,11 +36,17 @@ module.exports = {
         {
           test: /\.scss$/,
           use: [
-              "style-loader", // creates style nodes from JS strings
-              "css-loader", // translates CSS into CommonJS
-              "sass-loader" // compiles Sass to CSS, using Node Sass by default
+              "style-loader",
+              "css-loader",
+              "sass-loader"
           ]
         },        
       ]
-    }
+    },
+    plugins :[
+      new HTMLplugin({
+        template: path.resolve(__dirname, 'src', 'index.html'),
+        filename: 'index.html'
+      }),
+    ],
   };
