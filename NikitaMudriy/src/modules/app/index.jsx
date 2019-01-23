@@ -4,10 +4,18 @@ import Developer from 'developer';
 
 class App extends React.Component {
     render() {
-        return <div>
-            <h1>Первое приложение на React</h1>
-            <Developer name={'Max'} position={'programmer'} />
-        </div>;
+        return <main className="main container my-3">
+            <header className="header my-3">
+                <h1 className="h1">ReactJS</h1>
+                <h2 className="h2">Домашнее задание 2</h2>
+            </header>
+            <div className="content my-3">
+                <Developer name={'Max'} position={'programmer'} />
+            </div>
+            <footer className="footer my-3">
+
+            </footer>
+        </main>;
     }
 }
 
