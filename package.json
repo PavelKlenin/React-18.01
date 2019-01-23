@@ -1,0 +1,27 @@
+{
+  "name": "react_geekbrains",
+  "version": "1.0.0",
+  "description": "JS Geekbrains",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Headmaster11/react_geekbrains.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Headmaster11/react_geekbrains/issues"
+  },
+  "homepage": "https://github.com/Headmaster11/react_geekbrains#readme"
+}
