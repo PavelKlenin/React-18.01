@@ -28,7 +28,7 @@
 
     const loop = (times = 0, callback = null) => {
         if(typeof times === 'number' && typeof callback === 'function')
-            for(let i = times; i > 0; i--, callback()){}
+            for(let i = times; i > 0; i--, callback());
     };
 
     loop(16, () => console.log('loop'));
