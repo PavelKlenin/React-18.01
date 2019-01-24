@@ -1,2 +1,3 @@
-/node_modules
+/pavel_klenin/node_modules
+/pavel_klenin/dist
 .DS_Store
