@@ -32,19 +32,9 @@
           QUANTITY = 10;
 
     for(let i = 0; i < QUANTITY; i++){
-        PROMISES.push(new Promise((resolve, reject) => {
-            fetch(`${URL}/${METHOD}/${i + 1}`).then((result) => {
-                resolve(result.json());
-            }).catch((error) => {
-                reject(error);
-            });
-        }));
+        PROMISES.push(fetch(`${URL}/${METHOD}/${i + 1}`).then(result => result.json()).catch(error => error));
     }
 
-    Promise.all(PROMISES).then(value => {
-        console.log(value);
-    }, error => {
-        console.log(error);
-    });
+    Promise.all(PROMISES).then(value => console.log(value)).catch(error => console.log(error));
 
 </script>
