@@ -15,5 +15,7 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('root' ));
+App = ReactDOM.render(<app/>, document.getElementById('root' ));
 
+
+export  default App;

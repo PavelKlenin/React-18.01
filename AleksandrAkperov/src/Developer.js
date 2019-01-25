@@ -6,7 +6,7 @@ class Developer {
     }
 }
 
-const Developer_1 = new Developer(5, 'IT', 'Avramenko');
+const Developer_1 = new Developer(10, 'IT', 'Avramenko');
 
 
 export default Developer_1;
