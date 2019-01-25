@@ -1,3 +1,4 @@
+// Создали экспортируемую функцию
 export function hello(userName) {
-  console.log(`Hello ${userName}`);
+  return `Hello ${userName}`;
 }
