@@ -8,7 +8,16 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'script.js'
   },
-  plugins: [new HtmlWebpackPlugin()]
+  plugins: [new HtmlWebpackPlugin()],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: '/node_modules/',
+        loader: 'babel-loader'
+      }
+    ]
+  }
 };
 
 module.exports = config;
