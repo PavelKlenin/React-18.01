@@ -1,3 +1,5 @@
-import
+import develop from './Developer'
 
-console.log("Five webpack project");
+const expec = develop.expc
+
+document.body.innerHTML = '<h1>' + expec + '</h1>'
