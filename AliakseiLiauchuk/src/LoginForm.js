@@ -5,7 +5,9 @@ class LoginForm extends React.Component {
     render() {
         return <div id='loginForm'>
             <form>
-                <label><input type='text' name="username"/>Enter username</label>
+                <p><label><input type='text'/>Enter username</label></p>
+                <p><label><input type='password' />Enter password</label></p>
+                <button type='submit'>Log in</button>
             </form>
             </div>
         
