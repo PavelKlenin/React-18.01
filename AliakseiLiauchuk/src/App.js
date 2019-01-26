@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import LoginForm from './LoginForm';
 
 class App extends React.Component {
     render() {
-        return <div>
-            <form>
-                <input type='text' name="username"/>
-                <label htmlFor="username">Enter username</label>
-            </form>
-        </div>
+        return <LoginForm />
     }
 }
 
