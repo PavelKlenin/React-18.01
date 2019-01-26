@@ -1,6 +1,9 @@
 import develop from './Developer'
 import app from './App'
-const expec = develop.expc;
+const textHTML = develop.text;
 
-document.body.innerHTML = '<h1>' + expec + '</h1>';
+
+document.body.innerHTML = '<h2>' + textHTML + '</h2>';
+
+
 
