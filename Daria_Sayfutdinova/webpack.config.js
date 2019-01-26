@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   	entry:{
-		main: path.resolve('./src/developers.js'),
+		main: path.resolve('./src/index.jsx'),
 	},
 
 	output: {
