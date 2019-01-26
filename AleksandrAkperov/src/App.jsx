@@ -7,7 +7,6 @@ class App extends React.Component {
         return <div>
             <h1>Первое приложение на React</h1>
             <p>Hello React</p>
-
         </div>
 
 
@@ -15,7 +14,7 @@ class App extends React.Component {
     }
 }
 
-App = ReactDOM.render(<app/>, document.getElementById('root' ));
+ReactDOM.render(<App/>, document.getElementById('root' ));
 
 
-export  default App;
+
