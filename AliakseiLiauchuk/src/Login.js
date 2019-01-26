@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class LoginForm extends React.Component {
+class Login extends React.Component {
     render() {
         return <div id='loginForm'>
             <form>
@@ -14,4 +14,4 @@ class LoginForm extends React.Component {
     }
 }
 
-export default LoginForm;
+export default Login;

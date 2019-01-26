@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LoginForm from './LoginForm';
+import LoginForm from './Login';
 
 class App extends React.Component {
     render() {
