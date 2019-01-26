@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 /*import Developer_1 from './Developer'*/
 
 class App extends React.Component {

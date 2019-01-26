@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import develop from './Developer'
 import App from './App'
 const textHTML = develop.text;
