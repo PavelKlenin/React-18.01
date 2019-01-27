@@ -1,9 +1,10 @@
 import develop from './Developer'
 import App from './App'
-const textHTML = develop.text;
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 
-document.body.innerHTML = '<h2>' + textHTML + '</h2>';
 
-ReactDOM.render(<App />, document.getElementById('root' ));
 
+ReactDOM.render(<App />, document.getElementById('root'));
+/*ReactDOM.render(<Developer_1 />, document.getElementById('root', text ));*/
