@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   	entry:{
-		main: path.resolve('./src/app.jsx'),
+		main: path.resolve('./src/app.jsgit'),
 	},
 
 	output: {
