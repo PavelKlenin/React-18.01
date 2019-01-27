@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   	entry:{
-		main: path.resolve('./src/index.jsx'),
+		main: path.resolve('./src/app.jsx'),
 	},
 
 	output: {
@@ -12,14 +12,16 @@ module.exports = {
 module: {
 	rules :[
 	{
-		test:/\.jsx?$/,
+		test:/\.js$/,
 		exclude: /node_modules/,
 use: {
 	 loader: 'babel-loader',
 	}
-								
+
 },],},
 resolve: {
 	extensions: ['.js', '.jsx'],
+
 }
+
 }

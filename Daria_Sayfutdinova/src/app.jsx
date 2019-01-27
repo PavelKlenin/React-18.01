@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 class App extends Component {
     render() {
-       return ( <div>
+       return <div>
            <h1>Hello!</h1>
-       </div> )
+       </div>
     }
 
 }
