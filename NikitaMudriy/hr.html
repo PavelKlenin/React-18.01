@@ -1,0 +1,179 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<title>GeekBrains - ReactJS</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<main class="main container my-3">
+    <header class="header my-3">
+        <h1 class="h1">ReactJS</h1>
+        <h2 class="h2">Домашнее задание 1</h2>
+        <nav class="nav my-3" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">1.3 HR</li>
+            </ol>
+        </nav>
+    </header>
+    <div class="content my-3">
+
+    </div>
+    <footer class="footer my-3">
+
+    </footer>
+</main>
+
+<script>
+
+    class Human {
+
+        constructor(name, age, dateOfBirth){
+            if(!(typeof name === 'string' || name instanceof String) || !(typeof age === 'number' && isFinite(age)) || !(typeof dateOfBirth === 'string' || dateOfBirth instanceof Date))
+                throw new Error(`Wrong parameters: ${arguments}`);
+
+            this.name = name;
+            this.age = age;
+            this.dateOfBirth = dateOfBirth instanceof Date ? dateOfBirth : new Date(dateOfBirth);
+        }
+
+        displayInfo() {
+            return `${this.name} ${this.age} ${this.dateOfBirth.toISOString().split('T')[0]}`;
+        }
+
+    }
+
+    class Employee extends Human {
+
+        constructor(name, dateOfBirth, salary, department){
+            if(!(typeof salary === 'number' && isFinite(salary)) || !(typeof department === 'string' || department instanceof String) || !(typeof dateOfBirth === 'string' || dateOfBirth instanceof Date))
+                throw new Error(`Wrong parameters: ${arguments}`);
+
+            dateOfBirth = dateOfBirth instanceof Date ? dateOfBirth : new Date(dateOfBirth);
+
+            super(name, Math.abs(new Date(Date.now() - dateOfBirth.getTime()).getUTCFullYear() - new Date(0).getUTCFullYear()), dateOfBirth);
+            this.salary = salary;
+            this.department = department;
+        }
+
+        displayInfo() {
+            return `${super.displayInfo()} ${this.salary} ${this.department}`;
+        }
+
+    }
+
+    class Developer extends Employee {
+
+        constructor(name, age, dateOfBirth, salary, department){
+            super(name, age, dateOfBirth, salary, department);
+            this._manager = null;
+        }
+
+        set manager(value){
+            if(!(value instanceof Manager) && value !== null)
+                throw new Error(`Employee is not Manager`);
+
+            this._manager = value;
+        }
+
+        get manager(){
+            return this._manager;
+        }
+
+    }
+
+    class Manager extends Employee {
+
+        constructor(name, age, dateOfBirth, salary, department){
+            super(name, age, dateOfBirth, salary, department);
+            this._dependents = new Set([]);
+        }
+
+        addDependent(value){
+            if(!(value instanceof Developer))
+                throw new Error(`Employee is not Developer`);
+
+            if(this.hasDependent(value))
+                throw new Error(`Developer is already dependent`);
+
+            this._dependents.add(value);
+            value.manager = this;
+        }
+
+        hasDependent(value){
+            if(!(value instanceof Developer))
+                throw new Error(`Employee is not Developer`);
+
+            return this._dependents.has(value);
+        }
+
+        deleteDependent(value){
+            if(!(value instanceof Developer))
+                throw new Error(`Employee is not Developer`);
+
+            if(!this.hasDependent(value))
+                throw new Error(`There is no such Developer`);
+
+            this._dependents.delete(value);
+            value.manager = null;
+        }
+
+        get dependents(){
+            return this._dependents;
+        }
+
+    }
+
+    const DEVELOPERS = [
+        new Developer('random', new Date(1988, 1, 22), 0, 'department0'),
+
+        new Developer('Developer1', new Date(2001, 1, 1), 1, 'department1'),
+        new Developer('Developer2', new Date(2002, 1, 1), 1, 'department1'),
+        new Developer('Developer3', new Date(2003, 1, 1), 1, 'department1'),
+        new Developer('Developer4', new Date(2004, 1, 1), 1, 'department1'),
+        new Developer('Developer5', new Date(2005, 1, 1), 1, 'department1'),
+        new Developer('Developer6', new Date(2006, 1, 1), 1, 'department1'),
+        new Developer('Developer7', new Date(2007, 1, 1), 1, 'department1'),
+        new Developer('Developer8', new Date(2008, 1, 1), 1, 'department1'),
+
+        new Developer('Developer9', new Date(2001, 1, 1), 2, 'department2'),
+        new Developer('Developer10', new Date(2002, 1, 1), 2, 'department2'),
+        new Developer('Developer11', new Date(2003, 1, 1), 2, 'department2'),
+        new Developer('Developer12', new Date(2004, 1, 1), 2, 'department2'),
+        new Developer('Developer13', new Date(2005, 1, 1), 2, 'department2'),
+        new Developer('Developer14', new Date(2006, 1, 1), 2, 'department2'),
+        new Developer('Developer15', new Date(2007, 1, 1), 2, 'department2'),
+        new Developer('Developer16', new Date(2008, 1, 1), 2, 'department2')
+    ];
+
+    const MANAGERS = [
+        new Manager('Manager1', new Date(2001, 1, 1), 1, 'department1'),
+        new Manager('Manager2', new Date(2002, 1, 1), 1, 'department1'),
+        new Manager('Manager3', new Date(2003, 1, 1), 1, 'department2'),
+        new Manager('Manager4', new Date(2004, 1, 1), 1, 'department2')
+    ];
+
+    MANAGERS[0].addDependent(DEVELOPERS[1]);
+    MANAGERS[0].addDependent(DEVELOPERS[2]);
+    MANAGERS[0].addDependent(DEVELOPERS[3]);
+    MANAGERS[0].addDependent(DEVELOPERS[4]);
+
+    MANAGERS[1].addDependent(DEVELOPERS[5]);
+    MANAGERS[1].addDependent(DEVELOPERS[6]);
+    MANAGERS[1].addDependent(DEVELOPERS[7]);
+    MANAGERS[1].addDependent(DEVELOPERS[8]);
+
+    MANAGERS[2].addDependent(DEVELOPERS[9]);
+    MANAGERS[2].addDependent(DEVELOPERS[10]);
+    MANAGERS[2].addDependent(DEVELOPERS[11]);
+    MANAGERS[2].addDependent(DEVELOPERS[12]);
+
+    MANAGERS[3].addDependent(DEVELOPERS[13]);
+    MANAGERS[3].addDependent(DEVELOPERS[14]);
+    MANAGERS[3].addDependent(DEVELOPERS[15]);
+    MANAGERS[3].addDependent(DEVELOPERS[16]);
+
+    console.log(DEVELOPERS[0].displayInfo());
+    console.log(DEVELOPERS[1].manager.displayInfo());
+
+</script>
