@@ -10,8 +10,8 @@
 }
 
 h1 {
-    color: red;
-  }
+  color: red;
+}
 
 .wrapper {
   padding: 10px;
@@ -20,7 +20,6 @@ h1 {
   margin: 0 auto;
   border: 1px solid black;
 }
-
 
 .menu {
   display: flex;
@@ -49,16 +48,16 @@ h1 {
   padding: 20px;
   margin: 0 auto;
   background-color: lemonchiffon;
-  box-shadow: 0 0 5px 1px gray;;
+  box-shadow: 0 0 5px 1px gray;
 }
 
-.form input[type=text],
-.form input[type=password] {
+.form input[type="text"],
+.form input[type="password"] {
   display: block;
   width: 300px;
   margin-bottom: 10px;
 }
 
-.form input[type=submit] {
+.form input[type="submit"] {
   cursor: pointer;
 }
