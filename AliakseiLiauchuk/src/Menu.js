@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Menu extends React.Component {
     render() {
@@ -15,5 +16,15 @@ class Menu extends React.Component {
         </div>   
     }
 }
+
+Menu.defaultProps = {
+    name: "main page",
+    href: "/"
+};
+
+Menu.propTypes = {
+    name: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+};
 
 export default Menu;
