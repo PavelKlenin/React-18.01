@@ -9,5 +9,15 @@ export default {
         new CleanWebpackPlugin('bin/prod', {
             root: path.resolve(__dirname , '../')
         })
-    ]
+    ],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: false
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    }
 };
