@@ -2,20 +2,10 @@ import React, {Component} from 'react';
 
 export default class Login extends Component {
 
-    state = {
-        auth: false
-    };
-
     static defaultProps = {
         user: false,
         onAuth: (user) => {}
     };
-
-    constructor(props, context, updater){
-        super(props, context, updater);
-
-        this.state.auth = !!this.props.user;
-    }
 
     onSubmit = event => {
         event.preventDefault();
