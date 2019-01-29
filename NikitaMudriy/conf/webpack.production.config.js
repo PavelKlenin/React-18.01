@@ -1,5 +1,7 @@
 import path from 'path';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 
 export default {
     output: {
