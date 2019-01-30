@@ -32,6 +32,13 @@ class WelcomeModal extends React.Component {
             overflowY: 'auto',
         };
 
+        let modaltext = {
+            width: '50%',
+            backgroundColor: '#fff',
+            paddingLeft: '10px',
+            boxShadow: [0, 0, '0.625rem', 'rgba(0, 0, 0, 0.2)'],
+        };
+
         let closeButton = {
             position: 'relative',
             top: -70,
