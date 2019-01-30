@@ -1,0 +1,21 @@
+.post:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #68828f;
+    margin-bottom: 10px;
+}
+.postBody {
+    text-align: justify;
+}
+.postInfo {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.postInfo p {
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
