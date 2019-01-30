@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 class Post extends React.Component {
     render() {
@@ -10,12 +9,5 @@ class Post extends React.Component {
         </>)
     }
 }
-
-Post.propTypes = {
-    title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-};
 
 export default Post;

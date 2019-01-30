@@ -25,7 +25,7 @@ class WelcomeModal extends React.Component {
             left: 0,
             bottom: 0,
             padding: '1rem',
-            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
             zIndex: '9999',
             opacity: 1,
             overflowX: 'hidden',
@@ -35,6 +35,7 @@ class WelcomeModal extends React.Component {
         let modaltext = {
             width: '50%',
             backgroundColor: '#fff',
+            paddingLeft: '10px',
             boxShadow: [0, 0, '0.625rem', 'rgba(0, 0, 0, 0.2)'],
         };
 
