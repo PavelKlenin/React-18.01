@@ -1,9 +1,9 @@
 const path = require('path'),
-HTMLplugin = require('html-webpack-plugin');
+HTMLplugin = require('html-webpack-plugin')
 
 module.exports = {
     entry:{
-        main: path.resolve(__dirname, 'src', 'index.js')
+        main: path.resolve(__dirname, 'src', 'App.js')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -21,7 +21,16 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            }
+            },
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+              }
         ]
     },
     resolve: {
@@ -31,6 +40,6 @@ module.exports = {
         new HTMLplugin({
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html'
-        }),
+        })
     ]
 }
