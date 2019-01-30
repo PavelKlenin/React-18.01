@@ -34,7 +34,7 @@ class WelcomeModal extends React.Component {
         };
 
         let modaltext = {
-            width: '100%',
+            width: '50%',
             backgroundColor: '#fff',
             boxShadow: [0, 0, '0.625rem', 'rgba(0, 0, 0, 0.2)'],
     
@@ -44,8 +44,8 @@ class WelcomeModal extends React.Component {
         };
 
         let closeButton = {
-            position: 'fixed',
-            top: 0,
+            position: 'relative',
+            top: -70,
             right: 0,
             background: '#fff',
             width: '2.5rem',
@@ -58,7 +58,7 @@ class WelcomeModal extends React.Component {
         
             '&:before, &:after': {
               content: '""',
-              position: 'relative',
+              position: 'absolute',
               top: '1.2rem',
               left: '0.25rem',
               width: '2rem',
@@ -81,14 +81,9 @@ class WelcomeModal extends React.Component {
         
         return (<div style={modalover}>
             <div style={modaltext}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius vitae neque quis lacinia. 
-                Donec tristique venenatis orci sit amet tempor. 
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                Fusce id enim blandit, tincidunt dui at, consequat dui. Proin tincidunt gravida pharetra. 
-                Suspendisse condimentum, tellus volutpat lobortis rutrum, arcu dui accumsan est, non viverra mauris diam sed augue. 
-                Aenean sed tincidunt libero, in gravida est. Proin ac orci dignissim, dictum sem ut, bibendum odio. 
-                Suspendisse sed arcu eu turpis dignissim dictum vel sit amet nisi. Quisque sed semper odio. 
-                Morbi at turpis ac velit semper posuere. Vestibulum vitae enim dui.
+                <h4>This a welcome window. And I want to welcome you, user, on this Blog webpage. You are welcome</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales enim non sodales pulvinar. 
+                Aliquam ultrices in nisl non luctus.</p>
             </div>
             <button style={closeButton} type="button" onClick={this.closeModal}>
                 X
