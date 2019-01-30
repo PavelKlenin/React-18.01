@@ -1,5 +1,5 @@
-import Developer from './developer';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
 
-document.addEventListener("DOMContentLoaded",() =>{
-    const MyNewDeveloper = new Developer();
-});
+ReactDOM.render(<App/>, document.querySelector('#root'));
