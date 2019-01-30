@@ -5,10 +5,10 @@ import styles from './Menu.css';
 
 class Menu extends React.Component {
     render () {
-        const menu = this.props.items.map((prop, index) => {
+        const menu = this.props.items.map((item, index) => {
             return (
                 <li key={index}>
-                    <a href={prop.href}>{prop.title}</a>
+                    <a href={item.href}>{item.title}</a>
                 </li>
             );
         });
