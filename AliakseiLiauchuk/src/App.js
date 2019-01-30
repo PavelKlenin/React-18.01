@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LoginForm from './Login';
-import Menu from './Menu';
+import Blog from './app/components/Blog';
+import WelcomeModal from './app/components/WelcomeModal';
 
 class App extends React.Component {
-    render() {
-        const menuItems = [
-            {href: '/', name: 'main page'},
-            {href: '/contacts', name: 'contacts'}
-        ];
-        return (
-            <React.Fragment>
-                <LoginForm />
-                <Menu items={menuItems}/>
-            </React.Fragment>
-        );
+    render() {       
+        return (<>
+            <Blog/>
+            <WelcomeModal />
+        </>);
     }
 }
 
