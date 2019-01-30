@@ -58,7 +58,7 @@ class WelcomeModal extends React.Component {
         
             '&:before, &:after': {
               content: '""',
-              position: 'absolute',
+              position: 'relative',
               top: '1.2rem',
               left: '0.25rem',
               width: '2rem',
