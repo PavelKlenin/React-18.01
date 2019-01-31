@@ -26,7 +26,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "watch": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
