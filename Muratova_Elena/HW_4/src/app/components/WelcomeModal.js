@@ -26,8 +26,8 @@ class WelcomeModal extends React.Component {
         <Modal
           isOpen={this.state.showModal}
           ariaHideApp={false}
-          contentLabel="Minimal Modal Example"
-        >
+          contentLabel="Minimal Modal Example" >
+          <p>Вы попали на 4 домашнее задание по курсу React Муратовой Алёны </p>
           <button onClick={this.handleCloseModal}>Close Modal</button>
         </Modal>
       </div>

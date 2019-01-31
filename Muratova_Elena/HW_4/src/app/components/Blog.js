@@ -15,7 +15,7 @@ class Blog extends React.Component {
       return (
         <div key={index}>
           <h1>{post.title}</h1>
-
+          <p>{post.postBody}</p>
           <br />
           <hr />
         </div>
