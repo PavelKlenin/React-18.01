@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #684934;
+}
+
+
+.container {
+    padding: 20px 50px;
+}

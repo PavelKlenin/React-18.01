@@ -1,9 +1,9 @@
 const path = require("path");
 
 module.exports = {
-    entry: "./src/App.js",
+    entry: path.resolve(__dirname, 'src', 'App'),
     output: {
-        path: path.resolve("dist"),
+        path: path.resolve(__dirname, "dist"),
         filename: "main.js"
     },
     mode: "development",
@@ -29,5 +29,8 @@ module.exports = {
                 ],
             },    
         ]
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist'),
     }
 }
