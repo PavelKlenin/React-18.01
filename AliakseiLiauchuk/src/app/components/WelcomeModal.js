@@ -30,20 +30,6 @@ class WelcomeModal extends React.Component {
             overflowX: 'hidden',
             overflowY: 'auto',
         };
-
-        let closeButton = {
-            position: 'relative',
-            top: -80,
-            right: 0,
-            background: '#fff',
-            width: '2.5rem',
-            height: '2.5rem',
-            padding: 0,
-            border: 0,
-            cursor: 'pointer',
-            outline: 0,
-            boxShadow: [0, 0, '0.625rem', 'rgba(0, 0, 0, 0.2)'],
-        };
         
         return (<div style={modalover}>
             <div className="modalTextStyle">
@@ -51,7 +37,7 @@ class WelcomeModal extends React.Component {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales enim non sodales pulvinar. 
                 Aliquam ultrices in nisl non luctus.</p>
             </div>
-            <button style={closeButton} type="button" onClick={this.closeModal}>
+            <button className="modalButtonStyle" type="button" onClick={this.closeModal}>
                 X
             </button>
         </div>
