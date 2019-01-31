@@ -12,15 +12,15 @@ export default {
     },
     resolve: {
         modules: [
-            path.resolve(__dirname, '../src/modules'),
+            path.resolve(__dirname, '../src/components'),
             'node_modules'
         ],
-        extensions: ['*', '.js', '.jsx']
+        extensions: ['*', '.js', '.jsx', '.mjs']
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|mjs)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
@@ -32,7 +32,7 @@ export default {
             },
             {
                 test: /\.less$/,
-                use:  ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+                use:  ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader']
             },
             {
                 test: /\.s[c|a]ss$/,
@@ -61,7 +61,8 @@ export default {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'index.[contenthash].css'
+            filename: '[name].[contenthash].css',
+            chunkFilename: "[id].css"
         }),
         new HtmlWebpackPlugin({
             inject: false,
