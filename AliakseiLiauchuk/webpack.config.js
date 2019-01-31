@@ -16,10 +16,6 @@ module.exports = {
           loader: "babel-loader"
         },
         {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
-        },
-        {
           test: /\.(html)$/,
           use: {
             loader: 'html-loader',
@@ -28,14 +24,14 @@ module.exports = {
             }
           }
         },
-        // {
-        //   test: /\.(sa|sc|c)ss$/,
-        //   use: [
-        //       "style-loader",
-        //       "css-loader",
-        //       "sass-loader"
-        //   ]
-        // },        
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+              "style-loader",
+              "css-loader",
+              "sass-loader"
+          ]
+        },        
       ]
     },
     plugins :[
