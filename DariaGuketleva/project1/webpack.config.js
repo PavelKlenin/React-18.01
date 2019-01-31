@@ -4,7 +4,7 @@ const path = require('path'),
 module.exports = {
 //точка входа
     entry:{
-        main: path.resolve(__dirname, 'src', 'index.js'),
+        main: path.resolve(__dirname, 'src', 'App.js'),
     },
 //куда помещаем сборку
     output: {
