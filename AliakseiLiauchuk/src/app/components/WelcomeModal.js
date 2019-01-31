@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/modal.css';
+// import styles from '../styles/modal.css';
 
 class WelcomeModal extends React.Component {
     constructor(props) {
@@ -41,7 +41,7 @@ class WelcomeModal extends React.Component {
 
         let closeButton = {
             position: 'relative',
-            top: -70,
+            top: -80,
             right: 0,
             background: '#fff',
             width: '2.5rem',
@@ -54,8 +54,8 @@ class WelcomeModal extends React.Component {
         };
         
         return (<div style={modalover}>
-            {/* <div className={styles.modaltext}></div> */}
-            <div style={modaltext}>
+            <div className="modalTextStyle">
+            {/* <div style={modaltext}> */}
                 <h4>This a welcome window. And I want to welcome you, user, on this Blog webpage. You are welcome</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales enim non sodales pulvinar. 
                 Aliquam ultrices in nisl non luctus.</p>

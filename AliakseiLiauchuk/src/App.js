@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Blog from './app/components/Blog';
 import WelcomeModal from './app/components/WelcomeModal';
+import './app/styles/modal.css'
 
 class App extends React.Component {
     render() {
