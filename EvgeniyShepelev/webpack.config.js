@@ -1,35 +1,36 @@
 const path = require('path'),
-HTMLplugin = require('html-webpack-plugin');
+	HTMLplugin = require('html-webpack-plugin');
 module.exports = {
-entry:{
-main: path.resolve(__dirname, 'src', 'index.jsx'),
+	entry:{
+	main: path.resolve(__dirname, 'src', 'index.jsx'),
 },
 output: {
-path: path.resolve(__dirname, 'dist'),
-filename: 'bundle.js'
+	path: path.resolve(__dirname, 'dist'),
+	filename: 'bundle.js'
 },
 devServer: {
-historyApiFallback: true,
-contentBase: "./dist",
+	historyApiFallback: true,
+	contentBase: path.resolve(__dirname, 'dist'),
 },
 module: {
-rules :[
-{
-test:/\.jsx?$/,
-exclude: /node_modules/,
-use: {
-loader: 'babel-loader',
-}
-},
-]
+	rules :[{
+		test:/\.jsx?$/,
+		exclude: /node_modules/,
+		use: {
+			loader: 'babel-loader',
+			}
+		},]
 },
 resolve: {
-extensions: ['.js', '.jsx'],
+	extensions: ['.js', '.jsx'],
+	alias: {
+		components: path.resolve(__dirname, 'src', 'Components'),
+	}
 },
 plugins :[
-new HTMLplugin({
-template: path.resolve(__dirname, 'src', 'index.html'),
-filename: 'index.html'
-}),
+	new HTMLplugin({
+	template: path.resolve(__dirname, 'src', 'index.html'),
+	filename: 'index.html'
+	}),
 ],
 };
