@@ -53,7 +53,5 @@ const posts = [
 
 ReactDOM.render(<div>
      <WelcomeModal/>
-     <Blog/>
+     <Blog pos = {posts}/>
 </div>,document.getElementById("root"));
-
-<p>Lorem</p>

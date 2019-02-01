@@ -10,12 +10,11 @@ import React from 'react';
 
     render(){
         alert('сработал метод render');
-        return(
+        return (
             <div>
                 -
             </div>
 
-            <p>Lorem</p>
         )
     }
 

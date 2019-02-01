@@ -8,13 +8,17 @@ class Posts extends React.Component {
 
 
     render () {
-        <div>
-            <p>
-                title = this.props.title
-                post = this.props.text
-                date - this.props.date
-            </p>
-        </div>
+        return (
+            <div>
+                <p>
+                    {this.props.title}
+                    {this.props.text}
+                    {this.props.date}
+                </p>
+            </div>
+
+            )
+
     }
 
 
