@@ -1,38 +1,41 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './components/Menu'
-import LoginForm from './components/LoginForm'
+import Blog from './app/components/Blog'
+import WelomeModal from './app/components/WelcomeModal'
+import './app/styles/style.css'
 
-class App extends React.Component{
-    constructor(){
+const posts = [
+    {
+        title: 'Заголовок 1',
+        postBody: 'Текст поста 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto cum, dolores earum excepturi id, inventore ipsam magnam mollitia optio, provident quas voluptatem! Consequatur cupiditate dignissimos dolorum, perferendis repudiandae sequi!'
+    },
+    {
+        title: 'Заголовок 2',
+        postBody: 'Текст поста 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto cum, dolores earum excepturi id, inventore ipsam magnam mollitia optio, provident quas voluptatem! Consequatur cupiditate dignissimos dolorum, perferendis repudiandae sequi!'
+    },
+    {
+        title: 'Заголовок 3',
+        postBody: 'Текст поста 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto cum, dolores earum excepturi id, inventore ipsam magnam mollitia optio, provident quas voluptatem! Consequatur cupiditate dignissimos dolorum, perferendis repudiandae sequi!'
+    }
+];
+
+class App extends React.Component {
+    constructor() {
         super();
-        this.state={
-            'user':'',
-        };
+        // this.state={
+        //     'user':'',
+        // };
     }
 
-    logining() {
-
-        let login=document.querySelector('#login').value;
-        this.setState({
-            'user': login,
-        });
-        console.log(login)
-    }
-    render(){
-        const items=[
-        {'href': '/', 'title': 'Главная'},
-        {'href': '/catalog', 'title': 'Каталог'},
-        {'href': '/account', 'title': 'Личный кабинет'},
-        {'href': '/contacts', 'title': 'Контакты'},
-    ];
+    render() {
         return <div>
-            <h1>Первое приложение на React</h1>
-            <Menu items={items}>Меню</Menu>
-            <LoginForm logining={()=>this.logining()}/>
-            <div>Пользователь: {this.state.user}</div>
+            <Blog posts={posts}></Blog>
+            <WelomeModal></WelomeModal>
         </div>
     }
 }
 
-ReactDOM.render(<App/>, document.querySelector('#root'));
+const app = document.querySelector('#root');
+
+
+ReactDOM.render(<App/>, app);
