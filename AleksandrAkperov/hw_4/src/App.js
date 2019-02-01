@@ -1,5 +1,12 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import './app/styles/style.css';
+import WelcomeModal from "./app/components/WelcomeModal";
 
-<User/>
+
+const app = document.querySelector('root');
+
+
+ReactDOM.render(<div>
+    <WelcomeModal/>
+</div>,app );
