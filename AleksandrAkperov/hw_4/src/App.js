@@ -4,9 +4,9 @@ import './app/styles/style.css';
 import WelcomeModal from "./app/components/WelcomeModal";
 
 
-const app = document.querySelector('root');
+/*const app = document.querySelector('#root');*/
 
 
 ReactDOM.render(<div>
-    <WelcomeModal/>
-</div>,app );
+     <WelcomeModal/>
+</div>,document.getElementById("root"));
