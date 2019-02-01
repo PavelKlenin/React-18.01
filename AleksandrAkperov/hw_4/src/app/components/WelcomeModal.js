@@ -5,6 +5,7 @@ import React from 'react';
     constructor(props){
         super(props);
         alert('сработал метод constructor ');
+
     }
 
     render(){
@@ -13,6 +14,8 @@ import React from 'react';
             <div>
                 -
             </div>
+
+            <p>Lorem</p>
         )
     }
 
@@ -22,3 +25,4 @@ import React from 'react';
 }
 
 export default WelcomeModal
+
