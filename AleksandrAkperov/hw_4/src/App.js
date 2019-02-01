@@ -52,6 +52,6 @@ const posts = [
 
 
 ReactDOM.render(<div>
-     <WelcomeModal/>
-    {<Blog pos = {posts}/>}
+     {/*<WelcomeModal/>*/}
+     <Blog pos = {posts}/>
 </div>,document.getElementById("root"));

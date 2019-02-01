@@ -1,15 +1,16 @@
 import React from 'react';
+import Blog from "./Blog";
 
 
  class WelcomeModal extends React.Component {
     constructor(props){
         super(props);
-        alert('сработал метод constructor ');
+        console.log('сработал метод constructor ');
 
     }
 
     render(){
-        alert('сработал метод render');
+        console.log('сработал метод render');
         return (
             <div>
                 -
@@ -19,7 +20,7 @@ import React from 'react';
     }
 
     componentDidMount (){
-        alert('добрались до метода componentDidMount, АУЕ');
+        alert('добрались до метода componentDidMount, Вот теперь привет');
     }
 }
 

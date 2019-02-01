@@ -3,7 +3,7 @@ import Posts from "./Posts";
 
 
 
-class Blog extends React.Component() {
+class Blog extends React.Component {
         constructor (props) {
             super(props);
     }
@@ -13,7 +13,7 @@ class Blog extends React.Component() {
     render() {
 
         const posts = this.props.pos.map((pos, index) => {
-            return <Posts key={index}>title={pos.title} text = {pos.text} date = {pos.date} </Posts>
+            return <Posts key={index}> title={pos.title} text = {pos.text} date = {pos.date} </Posts>
         });
 
         return (
