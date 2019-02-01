@@ -4,7 +4,7 @@
 
 h2 {
     font-size: 1.2rem;
-    color: #68828f;
+    color: #16253f;
     margin-bottom: 10px;
 }
 .postBody {
@@ -18,4 +18,5 @@ h2 {
 .postInfo p {
     font-size: 0.8rem;
     margin-right: 10px;
+    color: #05213a;
 }
