@@ -5,7 +5,8 @@ import WelcomeModal from "./app/components/WelcomeModal";
 import Blog from "./app/components/Blog";
 
 const posts = [
-    {title:"post", text:"это текст-\"рыба\", часто используемый в печати " +
+    {title:"post",
+        text:"это текст-\"рыба\", часто используемый в печати " +
         "и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для " +
         "текстов на латинице с начала XVI века. В то время некий безымянный " +
         "печатник создал большую коллекцию размеров и форм шрифтов, используя " +
@@ -52,6 +53,6 @@ const posts = [
 
 
 ReactDOM.render(<div>
-     {/*<WelcomeModal/>*/}
+     <WelcomeModal/>
      <Blog pos = {posts}/>
 </div>,document.getElementById("root"));

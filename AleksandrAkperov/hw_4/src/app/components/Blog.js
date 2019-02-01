@@ -13,6 +13,8 @@ class Blog extends React.Component {
     render() {
 
         const posts = this.props.pos.map((pos, index) => {
+            console.log(pos);
+
             return <Posts key={index}> title={pos.title} text = {pos.text} date = {pos.date} </Posts>
         });
 
