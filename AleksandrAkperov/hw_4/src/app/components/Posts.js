@@ -9,14 +9,11 @@ class Posts extends React.Component {
 
     render () {
 
-        console.log(this.props)
+        console.log(this.props);
         return (
             <div>
                 <p>
-
                     {this.props.children}
-                    {/*{this.props.text}
-                    {this.props.date}*/}
                 </p>
             </div>
 
