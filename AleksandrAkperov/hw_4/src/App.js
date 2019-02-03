@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './app/styles/style.css';
-import WelcomeModal from "./app/components/WelcomeModal";
+import Modal from "./app/components/WelcomeModal";
 import Blog from "./app/components/Blog";
 
 const posts = [
     {title:"Пост 1",
-        text:"это текст-\"рыба\", часто используемый в печати " +
+        text:"Это текст-\"рыба\", часто используемый в печати " +
         "и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для " +
         "текстов на латинице с начала XVI века. В то время некий безымянный " +
         "печатник создал большую коллекцию размеров и форм шрифтов, используя " +
@@ -30,7 +30,7 @@ const posts = [
         "в разделе 1.10.32",
         date:"01.02.2018" },
     {title:"Пост 3",
-        text:"сть много вариантов Lorem Ipsum, но большинство из них имеет " +
+        text:"Есть много вариантов Lorem Ipsum, но большинство из них имеет " +
         "не всегда приемлемые модификации, например, юмористические вставки или слова, " +
         "которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для " +
         "серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине " +
@@ -53,10 +53,9 @@ const posts = [
 
 ];
 
-/*const app = document.querySelector('#root');*/
-
 
 ReactDOM.render(<div>
-     <WelcomeModal/>
+    <Modal/>
      <Blog postsel = {posts}/>
 </div>,document.getElementById("root"));
+
