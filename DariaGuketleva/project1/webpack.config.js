@@ -25,9 +25,12 @@ module.exports = {
 //игнорируем дмректорию
                 exclude: /node_modules/,
 //что используем если нашли файл
-                use: {
-                    loader: 'babel-loader',
-                }
+                    use: 'babel-loader',
+            },
+            {
+                test:/\.css$/,
+                exclude: /node_modules/,
+                use:  ['style-loader', 'css-loader'],
             },
         ]
     },
