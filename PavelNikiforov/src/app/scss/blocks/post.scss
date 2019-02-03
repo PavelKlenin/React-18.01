@@ -1,0 +1,36 @@
+.post {
+    border: 1px solid $lightGray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px 0px rgba($lightGray, 0.75);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__heading {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
+    &__text {
+        line-height: 1.5em;
+    }
+
+    &__dateline {
+        margin: 10px 0;
+        font-size: 0.8em;
+        color: $lightGray;
+    }
+
+    &__author {
+        text-decoration: none;
+        color: $secondaryColor;
+
+        &:hover {
+            color: $secondaryColorLight;
+            border-bottom: 1px solid;
+        }
+    }    
+}
