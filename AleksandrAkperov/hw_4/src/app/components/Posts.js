@@ -12,7 +12,7 @@ class Posts extends React.Component {
         console.log(this.props);
         return (
             <div>
-                <p>
+                <p >
                     {this.props.children}
                 </p>
             </div>
