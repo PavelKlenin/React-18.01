@@ -1,26 +1,38 @@
 import React from 'react';
-import Blog from "./Blog";
+
 
 
  class WelcomeModal extends React.Component {
     constructor(props){
         super(props);
-        console.log('сработал метод constructor ');
 
     }
 
-    render(){
-        console.log('сработал метод render');
-        return (
-            <div>
-                -
+
+    CallModal () {
+        const Modal = <div>
+            <div id="myModal" className="modal" >
+                <div className="modal-content">
+                    <span className="close">&time</span>
+                    <p>Модальное окно</p>
+                </div>
             </div>
+        </div>;
+    }
+
+
+    render(){
+        const rend = "здесь поработал метод  render()"
+        return (
+               <div>
+                   {rend}
+               </div>
 
         )
     }
 
     componentDidMount (){
-        alert('добрались до метода componentDidMount, Вот теперь привет');
+        this.CallModal();
     }
 }
 
