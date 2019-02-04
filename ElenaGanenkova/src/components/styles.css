@@ -1,0 +1,27 @@
+h1 {
+    margin-top: 100px;
+}
+
+.app-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.modal-window__window {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    min-height: 200px;
+    padding: 20px;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 10px 10px 119px 20px rgba(0,0,0,0.75);
+}

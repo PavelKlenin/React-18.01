@@ -1,0 +1,49 @@
+.modal {
+    &__window {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba($black, 0.75);
+    }
+
+    &__text {
+        width: 300px;
+        padding: 15px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: $white;
+        border-radius: 10px;
+    }
+
+    &__close {
+        border: none;
+        cursor: pointer;
+
+        &_icon {
+            background: transparent;
+            font-weight: 700;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        &_button {
+            margin-top: 10px;
+            display: block;
+            padding: 0 10px;
+            line-height: 2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: $white;
+            background: $primaryColor;
+            transition: background-color 0.5s ease;
+
+            &:hover {
+                background: $primaryColorLight;
+            }
+        }
+    }
+}
