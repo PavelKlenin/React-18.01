@@ -20,7 +20,7 @@ export default class Login extends React.Component {
 
     render() {
         return (
-            <div class="jumbotron text-center">
+            <div className="jumbotron text-center">
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         <h1>Login:</h1>
