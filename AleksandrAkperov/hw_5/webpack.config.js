@@ -15,6 +15,7 @@ module.exports = {
     },
     //сервер
     devServer: {
+        historyApiFallback: true,
         contentBase: path.resolve(__dirname, 'dist')
     },
     //используемые модули
