@@ -7,7 +7,7 @@ export default class User extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            user:null
+            user: null
         }
 
         axios.get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
