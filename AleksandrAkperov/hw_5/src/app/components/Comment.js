@@ -8,7 +8,7 @@ export default class  Comment extends React.Component {
                 <div className="card border-secondary mb-3">
                     <div className="card-header">
                         <Link to={`/comments/${this.props.id}`}>
-                            {this.props.title}
+                            {this.props.name}
                         </Link>
                     </div>
                     <div className="card-body text-secondary">
