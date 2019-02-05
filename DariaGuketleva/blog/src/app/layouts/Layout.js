@@ -5,7 +5,7 @@ import MenuItem from '../components/MenuItem';
 export default class Layout extends Component{
     constructor(props){
         super(props);
-        this.brand='Dafna React blog!';
+        this.brand='React blog!';
     }
 
     isActive(href){
