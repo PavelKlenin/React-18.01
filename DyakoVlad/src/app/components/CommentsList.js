@@ -12,7 +12,7 @@ export default class CommentsList extends React.Component {
 
         axios.get('https://jsonplaceholder.typicode.com/comments/')
             .then(response => {
-                this.setState({posts: response.data})
+                this.setState({comments: response.data})
             });
     }
 

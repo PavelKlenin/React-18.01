@@ -7,21 +7,21 @@ export default class UsersList extends React.Component {
     super(props);
 
     this.state = {
-      comments: []
+      users: []
     };
     
     axios.get('https://jsonplaceholder.typicode.com/users/')
     .then(response => {
-      this.setState({posts: response.data})
+      this.setState({users: response.data})
     });
   }
 
   render() {
-    if (!this.state.comments.length) {
+    if (!this.state.users.length) {
       return null;
     }
 
-    const users = this.state.comments.map((user, index) => {
+    const users = this.state.users.map((user, index) => {
       return <User key={index} {...user} />
     });
 

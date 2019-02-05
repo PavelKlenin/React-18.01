@@ -7,9 +7,9 @@ export default class User extends React.Component {
 
         <div className="card border-secondary mb-3">
           <div className="card-header">
-          <Link to={`/users/${this.props.id}`}>
-          {this.props.username}
-          </Link>
+              <Link to={`/users/${this.props.id}`}>
+                  {this.props.username}
+              </Link>
           </div>
           <div className="card-body text-secondary">
             <p>{this.props.name}</p>
