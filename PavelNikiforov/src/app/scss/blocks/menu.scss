@@ -1,13 +1,21 @@
 .menu {
+    background: $primaryColor;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        padding: 0;
+    }
+
     &__main {
-        background: $primaryColor;
         display: flex;
-        padding: 0 15px;
         list-style-type: none;
         flex-direction: row;
         flex-wrap: nowrap;
 
-        @media screen and (max-width: 760px) {
+        @media screen and (max-width: 480px) {
             flex-direction: column;
             padding: 0;
         }
@@ -15,6 +23,10 @@
         .menu {
             &__item {
                 transition: background-color 0.5s ease;
+
+                &_active {
+                    background: $primaryColorDark;
+                }
 
                 &:hover {
                     background: $primaryColorDark;
@@ -24,7 +36,11 @@
                 padding: 15px;
                 display: -webkit-box;
                 color: $white;
-                text-decoration: none
+                text-decoration: none;
+
+                &_main {
+                    padding: 15px 15px 15px 0;
+                }
             }
         }
     }

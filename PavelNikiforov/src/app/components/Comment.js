@@ -1,23 +1,24 @@
 import React from 'react'
 import {Link} from 'react-router'
 
-class Post extends React.Component {
+class Comment extends React.Component {
     render() {
-        const {id, title, body} = this.props
+        const {id, name, email, body} = this.props
 
         return (
             <div className="card">
                 <div className="card__heading">
-                    <Link to={`/posts/${id}`} className="card__heading_link">
-                        {title}
+                    <Link to={`/comments/${id}`} className="card__heading_link">
+                        {name}
                     </Link>
                 </div>
                 <div className="card__text">
                     <p>{body}</p>
+                    <p>by {email}</p>
                 </div>
             </div>
         )
     }
 }
 
-export default Post
+export default Comment
