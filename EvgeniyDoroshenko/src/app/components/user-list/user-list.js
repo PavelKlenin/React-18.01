@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
-import User from "./User";
+import User from "../user";
 
-class UsersList extends React.Component {
+class UserList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,4 +33,4 @@ class UsersList extends React.Component {
   }
 }
 
-export default UsersList;
+export default UserList;

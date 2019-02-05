@@ -1,6 +1,6 @@
 import React from "react";
-import Menu from "../components/Menu";
-import MenuItem from "../components/MenuItem";
+import Menu from "../components/menu";
+import MenuItem from "../components/menu-item";
 
 class Layout extends React.Component {
   constructor(props) {
@@ -21,6 +21,12 @@ class Layout extends React.Component {
           </MenuItem>
           <MenuItem href="/users" active={this.isActive("/users")}>
             Пользователи
+          </MenuItem>
+          <MenuItem href="/posts" active={this.isActive("/posts")}>
+            Посты
+          </MenuItem>
+          <MenuItem href="/comments" active={this.isActive("/comments")}>
+            Комментарии
           </MenuItem>
         </Menu>
         <div className="container">

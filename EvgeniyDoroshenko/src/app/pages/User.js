@@ -1,5 +1,5 @@
 import React from "react";
-import UserProfile from "../components/User";
+import UserProfile from "../components/user";
 import axios from "axios";
 
 class User extends React.Component {
@@ -8,10 +8,9 @@ class User extends React.Component {
     this.state = {
       user: null
     };
+    console.log(this);
     axios
-      .get(
-        `https://jsonplaceholder.typicode.com/users/${this.props.params.id}`
-      )
+      .get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
       .then(response => {
         this.setState({ user: response.data });
       });

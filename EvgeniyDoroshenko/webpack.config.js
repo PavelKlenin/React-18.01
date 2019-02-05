@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  entry: path.resolve(__dirname, "src", "app", "App.js"),
+  entry: path.resolve(__dirname, "src", "app", "index.js"),
   output: {
     path: path.resolve(__dirname, "app"),
     filename: "App.js"
@@ -14,7 +14,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "app", "html", "tmp.html")
+      template: path.resolve(__dirname, "src", "app", "html", "index.html")
     })
   ],
   module: {
