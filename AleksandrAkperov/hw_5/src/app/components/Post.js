@@ -7,7 +7,7 @@ export default class  Post extends React.Component {
             <div>
                 <div className="card border-secondary mb-3">
                     <div className="card-header">
-                        <Link to={`/post/${this.props.id}`}>
+                        <Link to={`/posts/${this.props.id}`}>
                             {this.props.title}
                         </Link>
                     </div>
