@@ -8,7 +8,6 @@ class Comment extends React.Component {
     this.state = {
       comment: null
     };
-    console.log(this);
     axios
       .get(`https://jsonplaceholder.typicode.com/comments/${this.props.params.commentId}`)
       .then(response => {

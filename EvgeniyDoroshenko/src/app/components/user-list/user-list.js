@@ -8,6 +8,9 @@ class UserList extends React.Component {
     this.state = {
       users: []
     };
+  }
+
+  componentDidMount() {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then(response => {

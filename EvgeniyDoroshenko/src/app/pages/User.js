@@ -8,7 +8,6 @@ class User extends React.Component {
     this.state = {
       user: null
     };
-    console.log(this);
     axios
       .get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
       .then(response => {

@@ -8,7 +8,6 @@ class Post extends React.Component {
     this.state = {
       post: null
     };
-    console.log(this);
     axios
       .get(`https://jsonplaceholder.typicode.com/posts/${this.props.params.postId}`)
       .then(response => {
