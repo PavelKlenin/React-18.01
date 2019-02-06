@@ -1,18 +1,16 @@
 import React from 'react'
-
-import MenuItem from './MenuItem'
+import {Link} from 'react-router'
 
 class Menu extends React.Component {
     render() {
-        const name = `menu__${this.props.name}`,
-        items = this.props.items.map((item, index) => {
-            return <MenuItem key={index} href={item.href} title={item.title}></MenuItem>
-        })
+        const name = this.props.name,
+        className = 'menu__main'
 
         return (
-            <nav className="menu">
-                <ul className={name}>
-                    {items}
+            <nav className={`menu ${className}`}>
+                <Link to="/" className="menu__link menu__link_main">{name}</Link>
+                <ul className={className}>
+                    {this.props.children}
                 </ul>
             </nav>
         )

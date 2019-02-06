@@ -9,4 +9,27 @@ $font-family: 'Roboto';
     font-family: $font-family;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer {
+    color: $white;
+    background-color: $primaryColor;
+    padding: 15px 0;
+    margin-top: 15px;
+}
+
+header {
+    color: $white;
+    background-color: $primaryColor;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
 @import './blocks.scss';
