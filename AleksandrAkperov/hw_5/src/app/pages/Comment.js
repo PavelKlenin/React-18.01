@@ -10,7 +10,7 @@ export default class Comment extends React.Component {
             comment: null
         }
 
-        axios.get(`https://https://jsonplaceholder.typicode.com/comments/${this.props.params.id}`)
+        axios.get(`https://jsonplaceholder.typicode.com/comments/${this.props.params.id}`)
             .then(response => {
                 this.setState({comment: response.data})
             });

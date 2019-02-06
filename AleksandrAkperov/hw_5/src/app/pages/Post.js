@@ -1,5 +1,5 @@
 import React from 'react';
-import PostPro from '../components/Post';
+import Postprofile from '../components/Post';
 import  axios from 'axios';
 
 
@@ -10,16 +10,16 @@ export default class Post extends React.Component {
             post: null
         }
 
-        /*axios.get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${this.props.params.id}`)
             .then(response => {
                 this.setState({post: response.data})
-            });*/
+            });
     }
 
     render() {
         return (
             <div>
-                {this.state.post && <PostPro {...this.state.post}/>}
+                {this.state.post && <Postprofile {...this.state.post}/>}
             </div>
         )
     }
