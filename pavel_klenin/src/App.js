@@ -1,35 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, browserHistory, hashHistory} from 'react-router';
 
-import Developer from './Developer';
-import Login from './Login';
-import Menu from './Menu';
+import Developer from './app/components/Developer';
+import Layout from './app/layouts/Layout';
 
-import styles from './App.css';
+import Main from './app/pages/Main';
+import Blogs from './app/pages/Blogs';
+import Blog from './app/pages/Blog';
+import Comments from './app/pages/Comments';
+import Users from './app/pages/Users';
+import User from './app/pages/User';
+import PageNotFound from './app/pages/PageNotFound';
 
 class App extends React.Component {
     render () {
-        const menuItems = [
-            {href:"/", title: "Главная"},
-            {href:"/news", title: "Новости"},
-            {href:"/products", title: "Продукты"},
-            {href:"/about", title: "О нас"},
-            {href:"/contacts", title: "Контакты"},
-        ]
-
         const developer = new Developer();
         developer.showDev();
-        console.log(styles);
 
         return (
-            <div className = {styles.header}>
-                <Menu title='Меню' items = {menuItems}/>
-                <Login legend='Авторизация'/>
-            </div>
+            <Router history={browserHistory}>
+                <Route path='/' component={Layout}>
+                    <IndexRoute component={Main}/>
+                    <Route path='blogs' component={Blogs}>
+                        <Route path=':blogID' component={Blog}/>
+                    </Route>
+                    <Route path='comments' component={Comments}/>
+                    <Route path='users' component={Users}>
+                        <Route path=':userID' component={User}/>
+                    </Route>
+                    <Route path='*' component={PageNotFound}/>
+                </Route>
+            </Router>
         );
     }
 }
 
-ReactDOM.render(<App/>, document.querySelector('.root'));
+const app = document.querySelector('#root');
+
+ReactDOM.render(<App/>, app);
 
 
