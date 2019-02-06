@@ -12,7 +12,7 @@ export default class Post extends React.Component {
 
         /*axios.get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
             .then(response => {
-                this.setState({users: response.data})
+                this.setState({post: response.data})
             });*/
     }
 

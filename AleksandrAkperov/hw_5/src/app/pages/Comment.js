@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentPro from '../components/Comment';
+import Commentprofile from '../components/Comment';
 import  axios from 'axios';
 
 
@@ -10,16 +10,16 @@ export default class Comment extends React.Component {
             comment: null
         }
 
-        /*axios.get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
+        axios.get(`https://https://jsonplaceholder.typicode.com/comments/${this.props.params.id}`)
             .then(response => {
-                this.setState({users: response.data})
-            });*/
+                this.setState({comment: response.data})
+            });
     }
 
     render() {
         return (
             <div>
-                {this.state.comment && <CommentPro {...this.state.comment}/>}
+                {this.state.comment && <Commentprofile {...this.state.comment}/>}
             </div>
         )
     }
