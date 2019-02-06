@@ -10,9 +10,17 @@ export default class Post extends React.Component {
             post: null
         }
 
+
+    }
+
+
+
+
+    componentDidMount() {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${this.props.params.id}`)
             .then(response => {
-                this.setState({post: response.data})
+                this.setState({post: response.data});
+
             });
     }
 
