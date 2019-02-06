@@ -2,18 +2,19 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  entry: path.resolve(__dirname, "src", "app", "components", "App.js"),
+  entry: path.resolve(__dirname, "src", "app", "index.js"),
   output: {
     path: path.resolve(__dirname, "app"),
     filename: "App.js"
   },
   devServer: {
     contentBase: path.resolve(__dirname, "app"),
-    port: 9000
+    port: 9000,
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "app", "html", "tmp.html")
+      template: path.resolve(__dirname, "src", "app", "html", "index.html")
     })
   ],
   module: {
