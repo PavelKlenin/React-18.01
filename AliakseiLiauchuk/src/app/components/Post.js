@@ -1,13 +1,21 @@
 import React from 'react';
+import {Link} from 'react-router-3';
 
-class Post extends React.Component {
-    render() {
-        return (<>
-            <h2>{this.props.item.title}</h2>
-            <p>{this.props.item.text}</p>
-            <p>by {this.props.item.author}, published on {this.props.item.date}</p>
-        </>)
-    }
+export default class Post extends React.Component {
+  render() {
+    return (
+
+        <div className="card border-secondary mb-3">
+          <div className="card-header">
+          <Link to={`/posts/${this.props.id}`}>
+          {this.props.id}
+          </Link>
+          </div>
+          <div className="card-body text-secondary">
+            <p>{this.props.title}</p>
+            <p>{this.props.body}</p>
+          </div>
+        </div>
+    );
+  }
 }
-
-export default Post;
