@@ -9,11 +9,6 @@ export default class Post extends React.Component {
         this.state = {
             post: null
         };
-
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${this.props.params.postId}`)
-            .then(response => {
-                this.setState({post: response.data})
-            });
     }
 
     render() {
@@ -22,5 +17,12 @@ export default class Post extends React.Component {
                 {this.state.post && <PostProfile {...this.state.post}/>}
             </div>
         );
+    }
+
+    componentDidMount() {
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${this.props.params.postId}`)
+            .then(response => {
+                this.setState({post: response.data})
+            });
     }
 }

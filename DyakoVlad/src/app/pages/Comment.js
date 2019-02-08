@@ -9,11 +9,6 @@ export default class Comment extends React.Component {
         this.state = {
             comment: null
         };
-
-        axios.get(`https://jsonplaceholder.typicode.com/comments/${this.props.params.commentId}`)
-            .then(response => {
-                this.setState({comment: response.data})
-            });
     }
 
     render() {
@@ -22,5 +17,12 @@ export default class Comment extends React.Component {
                 {this.state.comment && <CommentProfile {...this.state.comment}/>}
             </div>
         );
+    }
+
+    componentDidMount() {
+        axios.get(`https://jsonplaceholder.typicode.com/comments/${this.props.params.commentId}`)
+            .then(response => {
+                this.setState({comment: response.data})
+            });
     }
 }

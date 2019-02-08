@@ -9,11 +9,6 @@ export default class UsersList extends React.Component {
     this.state = {
       users: []
     };
-    
-    axios.get('https://jsonplaceholder.typicode.com/users/')
-    .then(response => {
-      this.setState({users: response.data})
-    });
   }
 
   render() {
@@ -31,5 +26,12 @@ export default class UsersList extends React.Component {
         {users}
       </div>
     );
+  }
+
+  componentDidMount() {
+      axios.get('https://jsonplaceholder.typicode.com/users/')
+          .then(response => {
+              this.setState({users: response.data})
+          });
   }
 }

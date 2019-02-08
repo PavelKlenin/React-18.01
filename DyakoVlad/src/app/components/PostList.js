@@ -9,11 +9,6 @@ export default class PostList extends React.Component {
         this.state = {
             posts: []
         };
-
-        axios.get('https://jsonplaceholder.typicode.com/posts/')
-            .then(response => {
-                this.setState({posts: response.data})
-            });
     }
 
     render() {
@@ -31,5 +26,12 @@ export default class PostList extends React.Component {
                 {posts}
             </div>
         );
+    }
+
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/posts/')
+            .then(response => {
+                this.setState({posts: response.data})
+            });
     }
 }

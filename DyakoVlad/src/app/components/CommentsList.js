@@ -9,11 +9,6 @@ export default class CommentsList extends React.Component {
         this.state = {
             comments: []
         };
-
-        axios.get('https://jsonplaceholder.typicode.com/comments/')
-            .then(response => {
-                this.setState({comments: response.data})
-            });
     }
 
     render() {
@@ -31,5 +26,12 @@ export default class CommentsList extends React.Component {
                 {comments}
             </div>
         );
+    }
+
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/comments/')
+            .then(response => {
+                this.setState({comments: response.data})
+            });
     }
 }

@@ -9,11 +9,6 @@ export default class User extends React.Component {
     this.state = {
       user: null
     };
-
-    axios.get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
-    .then(response => {
-      this.setState({user: response.data})
-    });
   }
 
   render() {
@@ -22,5 +17,12 @@ export default class User extends React.Component {
         {this.state.user && <UserProfile {...this.state.user}/>}
       </div>
     );
+  }
+
+  componentDidMount() {
+      axios.get(`https://jsonplaceholder.typicode.com/users/${this.props.params.userId}`)
+          .then(response => {
+              this.setState({user: response.data})
+          });
   }
 }
