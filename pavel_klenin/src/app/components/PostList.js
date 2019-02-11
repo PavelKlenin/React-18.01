@@ -1,23 +1,16 @@
 import React from 'react';
-import axios from 'axios';
+import {connect} from 'react-redux';
+import {fetchPosts} from '../actions/postsActions';
 
 import Post from './Post';
 
 class PostList extends React.Component {
     constructor (props) {
         super(props);
-        this.state = {
-            loading: true,
-            posts: [],
-        }
     }
 
     render () {
-        if (this.state.loading) {
-            return null;
-        }
-
-        const posts = this.state.posts.map((post, index) => {
+        const posts = this.props.posts.map((post, index) => {
             return (
                 <Post key={index} {...post}/>
             );
@@ -32,13 +25,10 @@ class PostList extends React.Component {
     }
 
     componentDidMount () {
-        axios.get('http://jsonplaceholder.typicode.com/posts/')
-            .then(response => this.setState({
-                loading: false,
-                posts: response.data
-            }))
-            .catch(error => console.log(error));
+        this.props.dispatch(fetchPosts());
     }
 }
 
-export default PostList;
+const mapStateToProps = (state) => ({posts: state.posts.posts,})
+
+export default connect(mapStateToProps)(PostList);
