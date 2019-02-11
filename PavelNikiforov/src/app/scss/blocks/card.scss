@@ -1,0 +1,21 @@
+.card {
+    border: 1px solid $lightGray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px 0px rgba($lightGray, 0.75);
+
+    &__heading {
+        background: $primaryColorLight;
+
+        &_link {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+    }
+
+    &__text {
+        padding: 15px;
+    }
+}

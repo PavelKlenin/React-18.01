@@ -1,21 +1,20 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 class Post extends React.Component {
     render() {
-        const {name, text, date, author} = this.props,
-        localeOptions = {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        },
-        authorLink = <>by <a href="#" className="post__author">{author}</a></>,
-        dateLine = (date || author) && <div className="post__dateline">{date && date.toLocaleString('en-US', localeOptions)} {author && authorLink}</div>
+        const {id, title, body} = this.props
 
         return (
-            <div className="post">
-                <h2 className="post__heading">{name}</h2>
-                <p className="post__text">{text}</p>
-                {dateLine}
+            <div className="card">
+                <div className="card__heading">
+                    <Link to={`/posts/${id}`} className="card__heading_link">
+                        {title}
+                    </Link>
+                </div>
+                <div className="card__text">
+                    <p>{body}</p>
+                </div>
             </div>
         )
     }
