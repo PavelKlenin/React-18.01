@@ -5,16 +5,17 @@ import {fetchPosts} from '../actions/postsActions';
 import Post from './Post';
 
 class PostList extends React.Component {
-    constructor (props) {
-        super(props);
-    }
-
+    
     render () {
-        const posts = this.props.posts.map((post, index) => {
-            return (
-                <Post key={index} {...post}/>
-            );
-        });
+
+        let posts = 'Loading...';
+        if (this.props.fetched) {
+            posts = this.props.posts.map((post, index) => {
+                return (
+                    <Post key={index} {...post}/>
+                );
+            });
+        }
         
         return (
             <div>
@@ -29,6 +30,9 @@ class PostList extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({posts: state.posts.posts,})
+const mapStateToProps = (state) => ({
+    posts: state.posts.posts,
+    fetched: state.posts.fetched,
+})
 
 export default connect(mapStateToProps)(PostList);
